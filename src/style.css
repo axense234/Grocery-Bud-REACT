@@ -1,0 +1,211 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+/* Hex codes: Peach #FCEDDA, Burnt Orange #EE4E34, Green #184A45FF */
+
+/* ANIMATIONS */
+@keyframes button_hover {
+  100% {
+    background-color: black;
+    border-color: black;
+    color: #f4df4eff;
+  }
+}
+
+#root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+body,
+html {
+  width: 100%;
+}
+
+body {
+  background-color: #949398ff;
+  font-family: "Heebo", sans-serif;
+}
+
+h1 {
+  align-self: center;
+  margin-bottom: 1rem;
+  margin-top: 0.5rem;
+  font-size: 2.3rem;
+  font-weight: 800;
+  letter-spacing: 0.2rem;
+  transition: font-size 0.5s;
+}
+
+input {
+  width: 80%;
+  height: 100%;
+  background-color: #fcedda;
+  border-top-left-radius: 0.4rem;
+  border-bottom-left-radius: 0.4rem;
+  font-size: 1.4rem;
+  padding-left: 0.5rem;
+  font-weight: 800;
+  outline: none;
+  border: 2px solid black;
+}
+
+.app-section {
+  background-color: #f4df4eff;
+  margin-top: 10rem;
+  padding: 1.5rem 2.5rem 2.5rem 2.5rem;
+  border-radius: 1rem;
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  box-shadow: 1px 1px 9px 3px black;
+  min-width: 400px;
+  max-width: 530px;
+  min-height: 120px;
+}
+
+#item-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 30rem;
+  margin: 1rem 0 1rem 0rem;
+  align-self: center;
+  transition: background-color 0.8s;
+  border-radius: 0.3rem;
+}
+
+#item-container:hover {
+  background-color: #949398ff;
+}
+
+#item-container > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  align-self: flex-end;
+  margin-left: auto;
+  margin-bottom: 0.5rem;
+}
+
+#edit {
+  background-color: inherit;
+  border: none;
+  color: green;
+  margin-right: 0.3rem;
+  font-size: 1.5rem;
+}
+
+#trash {
+  background-color: inherit;
+  border: none;
+  color: red;
+  font-size: 1.5rem;
+}
+
+#item-container > p {
+  align-self: flex-start;
+  font-size: 2rem;
+  font-weight: 800;
+  color: black;
+  transition: font-size 0.5s;
+}
+
+#input-container {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 2rem;
+  align-items: center;
+  padding: 0.3rem;
+  width: 90%;
+  text-align: center;
+  align-self: center;
+}
+
+#input-container > button {
+  background-color: #949398ff;
+  border: 2px solid black;
+  color: black;
+  height: 2.27rem;
+  width: 5rem;
+  border-top-right-radius: 0.4rem;
+  border-bottom-right-radius: 0.4rem;
+  font-size: 1.2rem;
+  font-weight: 800;
+  text-align: center;
+}
+
+#input-container > button:hover {
+  /* ANIMATION */
+  animation: button_hover 1s alternate 0.5s infinite;
+}
+
+#item-container:hover {
+  opacity: 0.8;
+}
+
+/* POP UPS */
+#pop-up {
+  width: 29.5rem;
+  text-align: center;
+  font-size: 0.9rem;
+  letter-spacing: 0.1rem;
+  border-radius: 0.5rem;
+  align-self: center;
+  background-color: red;
+  box-shadow: 1px 1px 9px 2px red;
+}
+
+#clear-all {
+  width: 60%;
+  height: 2rem;
+  margin-bottom: -1rem;
+  margin-top: 1rem;
+  background-color: #949398ff;
+  color: black;
+  font-weight: 800;
+  font-size: 1.3rem;
+  letter-spacing: 0.2rem;
+  border-radius: 0.3rem;
+  border: 2px solid black;
+}
+
+#clear-all:hover {
+  /* ANIMATION */
+  animation: button_hover 1s alternate 0.5s infinite;
+}
+
+@media screen and (max-width: 700px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+  input {
+    font-size: 1rem;
+  }
+  #input-container > button {
+    font-size: 0.9rem;
+    height: 1.75rem;
+  }
+  .app-section {
+    width: 30%;
+    height: 30%;
+  }
+  #item-container > p {
+    font-size: 1.5rem;
+    margin-left: 1rem;
+  }
+  #clear-all {
+    font-size: 1rem;
+    height: 1.5rem;
+    width: 50%;
+  }
+  #trash {
+    margin-right: 1rem;
+  }
+}
