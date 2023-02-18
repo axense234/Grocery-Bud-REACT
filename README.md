@@ -1,4 +1,4 @@
-# **Birthday Reminder**
+# **Grocery Bud**
 
 A simple React Project that focuses on the basics of react with the useReducer hook,localStorage,popup modal.
 
