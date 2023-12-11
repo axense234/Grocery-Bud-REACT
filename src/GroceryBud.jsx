@@ -7,6 +7,7 @@ import { FaTrash } from "react-icons/fa";
 import reducerFunction from "./reducerFunction";
 // Data
 import defaultState from "./data";
+// Components
 import Popup from "./Popup";
 
 const GroceryBud = () => {

@@ -11,6 +11,7 @@ A simple React Project that focuses on the basics of react with the useReducer h
 ### Dependencies
 
 - Check package.json for details.
+- Docker installed if you want to test using Docker
 
 ### Installing
 
@@ -20,9 +21,20 @@ git clone https://github.com/axense234/Grocery-Bud-REACT.git
 
 ### Executing program
 
+- **_Test through NPM_**
+
 ```
 npm install
 npm start
+```
+
+- **_Test through Docker_**
+
+```
+docker build -t grocery-bud-react:0.3.0 .
+docker stop grocery-bud-react-app
+docker rm grocery-bud-react-app
+docker run -d -p 3000:3000 --name grocery-bud-react-app grocery-bud-react:0.3.0
 ```
 
 ## **Authors**
@@ -31,6 +43,8 @@ npm start
 
 ## **Version History**
 
+- 0.3
+  - Analyzed code to gather to-do tasks and also added Docker to the project.
 - 0.2
   - Improved reducerFunction logic and improved how the website looks.
   - See [commit change](https://github.com/axense234/Grocery-Bud-REACT/commits/master) or See [release history](https://github.com/axense234/Grocery-Bud-REACT/releases)
