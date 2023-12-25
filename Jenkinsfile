@@ -16,6 +16,9 @@ pipeline {
         }
 
         stage('Health Check Simple(v1.3.0)') {
+          environment {
+            PATH = '/usr/bin'
+          }
           steps {
             sh 'npm install  && npm start && curl http://localhost:3000'
           }
@@ -24,8 +27,5 @@ pipeline {
       }
     }
 
-  }
-  environment {
-    PATH = '/usr/bin/npm'
   }
 }
