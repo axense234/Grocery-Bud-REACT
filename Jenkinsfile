@@ -8,8 +8,19 @@ pipeline {
     }
 
     stage('Add Log') {
-      steps {
-        sh 'ls -la'
+      parallel {
+        stage('Add Log') {
+          steps {
+            sh 'ls -la'
+          }
+        }
+
+        stage('Health Check Simple') {
+          steps {
+            sh 'npm install  && npm start && curl http://localhost:3000'
+          }
+        }
+
       }
     }
 
