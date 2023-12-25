@@ -17,7 +17,7 @@ pipeline {
 
         stage('Health Check Simple(v1.3.0)') {
           steps {
-            sh 'export PATH=/usr/bin:$PATH && npm install  && npm start && curl http://localhost:3000'
+            sh 'npm install  && npm start && curl http://localhost:3000'
           }
         }
 
