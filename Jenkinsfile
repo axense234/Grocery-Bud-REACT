@@ -15,9 +15,9 @@ pipeline {
           }
         }
 
-        stage('Health Check Simple(v1.1.0)') {
+        stage('Health Check Simple(v1.2.0)') {
           steps {
-            sh 'npm install  && npm start && curl http://localhost:3000'
+            sh 'node --version && npm install  && npm start && curl http://localhost:3000'
           }
         }
 
