@@ -1,7 +1,7 @@
 pipeline {
   agent any
   stages {
-    stage('Checkout Code') {
+    stage('Setup') {
       steps {
         git(url: 'https://github.com/axense234/Grocery-Bud-REACT', branch: 'master')
       }
@@ -17,7 +17,7 @@ pipeline {
 
         stage('Health Check Simple(v1.3.0)') {
           steps {
-            sh 'npm --version && npm install  && npm start && curl http://localhost:3000'
+            sh 'export PATH=/usr/bin:$PATH && npm install  && npm start && curl http://localhost:3000'
           }
         }
 
