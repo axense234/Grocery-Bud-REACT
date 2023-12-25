@@ -4,9 +4,6 @@ pipeline {
     stage('Setup') {
       steps {
         git(url: 'https://github.com/axense234/Grocery-Bud-REACT', branch: 'master')
-        sh '''apt update;apt install curl gnupg2 -y; curl -fsSL https://deb.nodesource.com/setup_16.x |bash -
-;apt install -y nodejs
-'''
       }
     }
 
