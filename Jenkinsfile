@@ -26,6 +26,6 @@ pipeline {
 
   }
   environment {
-    PATH = '/usr/bin'
+    PATH = '/usr/bin/npm'
   }
 }
