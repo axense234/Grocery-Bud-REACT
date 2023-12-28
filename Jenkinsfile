@@ -26,7 +26,7 @@ pipeline {
 
     stage('Build') {
       steps {
-        sh 'docker build -t grocery-bud-react:test .'
+        sh 'docker info && docker build -t grocery-bud-react:test .'
       }
     }
 
