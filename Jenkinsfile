@@ -9,22 +9,29 @@ pipeline {
 
     stage('Add Log') {
       parallel {
-        stage('Add Log') {
-          steps {
-            sh 'ls -la'
-          }
-        }
-
         stage('NPM Test') {
           steps {
             sh 'npm --version'
           }
         }
 
+        stage('Docker Login') {
+          environment {
+            DOCKER_USERNAME = 'andreicomanescuonline@gmail.com'
+            DOCKER_PASSWORD = 'J8@k-R5&m$_'
+          }
+          steps {
+            sh '''#!/bin/bash
+
+docker login --username "${DOCKER_USERNAME}" --password-stdin <<< "${DOCKER_PASSWORD}"
+'''
+          }
+        }
+
       }
     }
 
-    stage('Build') {
+    stage('Docker Build') {
       steps {
         sh 'docker info && docker build -t grocery-bud-react:test .'
       }
