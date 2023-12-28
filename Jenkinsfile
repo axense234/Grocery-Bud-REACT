@@ -16,13 +16,8 @@ pipeline {
         }
 
         stage('Docker Login') {
-          environment {
-            DOCKER_USERNAME = 'andreicomanescuonline@gmail.com'
-            DOCKER_PASSWORD = 'J8@k-R5&m$_'
-          }
           steps {
-            sh '''#!/bin/bash
-
+            sh '''
 docker login --username "${DOCKER_USERNAME}" --password-stdin <<< "${DOCKER_PASSWORD}"
 '''
           }
