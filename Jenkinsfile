@@ -15,7 +15,7 @@ pipeline {
 
     stage('Docker Build') {
       steps {
-        sh 'docker info && docker build -t grocery-bud-react:test .'
+        sh 'curl https://registry-1.docker.io/v2/library/node/manifests/latest; docker info && docker build -t grocery-bud-react:test .'
       }
     }
 
