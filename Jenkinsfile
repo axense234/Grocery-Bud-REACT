@@ -7,21 +7,9 @@ pipeline {
       }
     }
 
-    stage('Add Log') {
-      parallel {
-        stage('NPM Test') {
-          steps {
-            sh 'npm --version'
-          }
-        }
-
-        stage('Docker Login') {
-          steps {
-            sh '''
-docker login'''
-          }
-        }
-
+    stage('NPM Test') {
+      steps {
+        sh 'npm --version'
       }
     }
 
