@@ -15,7 +15,7 @@ pipeline {
 
     stage('AWS ECR Login') {
       steps {
-        sh 'aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 797345446188.dkr.ecr.us-east-1.amazonaws.com'
+        sh 'aws ecr-public get-login-password --region us-east-1 | docker login --username AWS --password-stdin public.ecr.aws/g6t2k7y6'
       }
     }
 
@@ -27,11 +27,8 @@ pipeline {
 
     stage('AWS ECR Push') {
       steps {
-        sh '''docker tag grocery-bud-react:latest 797345446188.dkr.ecr.us-east-1.amazonaws.com/grocery-bud-react:latest
-
-
-'''
-        sh 'docker push 797345446188.dkr.ecr.us-east-1.amazonaws.com/grocery-bud-react:latest'
+        sh 'aws ecr-public get-login-password --region us-east-1 | docker login --username AWS --password-stdin public.ecr.aws/g6t2k7y6'
+        sh 'docker push public.ecr.aws/g6t2k7y6/grocery-bud-react:latest'
       }
     }
 
