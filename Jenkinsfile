@@ -27,7 +27,7 @@ pipeline {
 
     stage('AWS ECR Push') {
       steps {
-        sh 'aws ecr-public get-login-password --region us-east-1 | docker login --username AWS --password-stdin public.ecr.aws/g6t2k7y6'
+        sh 'docker tag grocery-bud-react:latest public.ecr.aws/g6t2k7y6/grocery-bud-react:latest'
         sh 'docker push public.ecr.aws/g6t2k7y6/grocery-bud-react:latest'
       }
     }
