@@ -1,10 +1,17 @@
 # **Grocery Bud**
 
-A simple React Project that focuses on the basics of react with the useReducer hook,localStorage,popup modal.
+A simple React Project that focuses on the basics of react with the useReducer hook,localStorage, popup modal.
 
 ## **Description**
 
-A simple React Project that focuses on the basics of react with the useReducer hook,localStorage,popup modal.The project is themed around a grocery list with grocery items fetched from localStorage.You can add items to the list and they will be saved even if you exit and reenter the website.Also please note that the localStorage part is a complex system i did for fun and should probably not be copied,since you can just update the entire list not specific items.
+A simple React Project that focuses on the basics of react with the useReducer hook,localStorage, popup modal. The project is themed around a grocery list with grocery items fetched from localStorage. You can add items to the list and they will be saved even if you exit and reenter the website. Also please note that the localStorage part is a complex system i did for fun and should probably not be copied, since you can just update the entire list not specific items.
+
+## **Features**
+
+- Adding Grocery Items
+- Removing Grocery Items
+- Editing Grocery Items (only name)
+- Clearing all Grocery Items
 
 ## **Getting Started**
 
